@@ -157,5 +157,5 @@ This project demonstrates how machine learning combined with real-time environme
 ---
 
 <p align="center">
-<b>Built with ❤️ by Team Tech Titans</b>
+<b>Built with ❤️ by Team Tech </b>
 </p>
