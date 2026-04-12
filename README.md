@@ -67,12 +67,12 @@ uhi-predictor/
 ├── app.py
 │
 ├── data/
-│   ├── preprocess.py
-│   └── training_ready.csv
+│ ├── preprocess.py
+│ └── training_ready.csv
 │
 ├── model/
-│   ├── train_model.py
-│   └── uhi_model.pkl
+│ ├── train_model.py
+│ └── uhi_model.pkl
 │
 ├── notebooks/
 └── docs/
