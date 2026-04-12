@@ -1,138 +1,160 @@
 # 🌡️ Urban Heat Island (UHI) Predictor — India
 
-### 👨‍💻 Team: Tech Titans  
-Manmath · Krishna · Gunjan · Om  
+<p align="center">
+  <b>AI-powered real-time prediction of Urban Heat Island intensity across Indian cities</b>
+</p>
 
 ---
 
-## 📌 Project Overview
+## 📖 Overview
 
-This project predicts **Urban Heat Island (UHI) severity** for major Indian cities using:
+Urban Heat Island (UHI) is a major environmental issue where urban areas experience higher temperatures than surrounding rural regions due to human activities and infrastructure.
 
-- 🌐 Live weather data (Open-Meteo API)
-- 🤖 Machine Learning (XGBoost Classifier)
-- 📊 Interactive visualization (Streamlit)
+This project presents a **real-time UHI prediction system** that integrates:
+
+* 🌐 Live weather data using Open-Meteo API
+* 🤖 Machine Learning using XGBoost Classifier
+* 📊 Interactive visualization (Streamlit dashboard)
 
 ---
 
 ## ⚙️ System Workflow
 
-1. User selects a city
-2. API fetches live urban & rural temperature
-3. UHI intensity is calculated
-4. Features are passed to ML model
-5. Model predicts severity:
-   - None
-   - Mild
-   - Moderate
-   - Severe
+User selects city
+→ Live weather data fetched from API
+→ Feature vector generated
+→ Trained ML model predicts UHI severity
+→ Result displayed to user
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 Machine Learning Pipeline
 
-### ✔ Features Used
-- Temperature
-- Elevation
-- Population Density
-- Energy Consumption
-- AQI
-- Urban Greenness Ratio
-- Wind Speed
-- Humidity
-- Annual Rainfall
+### 🔹 Features Used
+
+* Temperature
+* Elevation
+* Population Density
+* Energy Consumption
+* AQI
+* Urban Greenness Ratio
+* Wind Speed
+* Humidity
+* Annual Rainfall
 
 ---
 
-### ✔ Model Details
-- Algorithm: XGBoost Classifier
-- Accuracy: ~100% (rule-based labeling)
-- Output: UHI severity classification
+### 🔹 Model Details
+
+* Algorithm: XGBoost Classifier
+* Training: Rule-based label generation
+* Output Classes:
+
+  * 0 → None
+  * 1 → Mild
+  * 2 → Moderate
+  * 3 → Severe
+
+Note: High accuracy (~100%) is expected because labels are generated using deterministic rules.
 
 ---
 
 ## 📂 Project Structure
+
 uhi-predictor/
 ├── config.py
 ├── pipeline.py
 ├── app.py
+│
 ├── data/
+│   ├── preprocess.py
+│   └── training_ready.csv
+│
 ├── model/
+│   ├── train_model.py
+│   └── uhi_model.pkl
+│
 ├── notebooks/
 └── docs/
 
+---
+
+## 🚀 Getting Started
+
+### 1. Clone Repository
+
+git clone https://github.com/Krishna-Kush-05/EVS_Final_Project.git
+cd EVS_Final_Project/uhi-predictor
 
 ---
 
-## 🚀 How to Run
-
-```bash
-git clone <repo-link>
-cd uhi-predictor
+### 2. Setup Virtual Environment
 
 python -m venv venv
 venv\Scripts\activate
 
+---
+
+### 3. Install Dependencies
+
 pip install -r requirements.txt
+
+---
+
+### 4. Run Application
 
 streamlit run app.py
 
+---
 
+## 🔍 Example Output
 
+City: Mumbai
+UHI Intensity: +0.8°C
+Severity: None
 
 ---
 
-# 🚀 PART 3 — MESSAGE FOR GUNJAN (SEND THIS)
+## 🧩 Key Features
 
-Use this EXACT WhatsApp message:
-
----
-
-:::writing{variant="chat_message" id="84219"}
-Gunjan, I have completed my part (ML model training + full integration with pipeline). The model is now working with live API data and predictions are running successfully.
-
-Now you need to complete the UI (your part). Follow this:
-
-1. Pull latest code from "manmath" branch
-2. Go inside uhi-predictor folder
-3. Install dependencies:
-   pip install streamlit plotly requests
-4. Run:
-   streamlit run app.py
-
-Your task:
-- Build the Streamlit dashboard (use pipeline.py)
-- Add city selector (dropdown)
-- Show prediction output (severity, temp, UHI)
-- Add India map visualization (important for marks)
-- Make UI clean and visually appealing
-
-Important:
-Just call this function:
-from pipeline import predict_uhi
-
-result = predict_uhi("Mumbai")
-
-Display the result — no ML work needed from your side.
-
-If you get stuck for more than 20–30 mins, message immediately.
-:::
+✔ Real-time prediction using live API data
+✔ Machine Learning-based classification
+✔ Modular and scalable architecture
+✔ Ready for visualization and deployment
 
 ---
 
-# 🚀 PART 4 — REPO IMPROVEMENTS (VERY IMPORTANT)
+## 📊 Data Sources
 
-I reviewed your structure :contentReference[oaicite:0]{index=0} — here’s what to improve:
+* Urban Heat Island Dataset (Kaggle)
+* Open-Meteo Weather API
 
 ---
 
-## 🔥 1. Add `.gitignore` (CRITICAL)
+## 👥 Team Contributions
 
-Create `.gitignore`:
+Manmath → Pipeline, API integration, system design
+Krishna → Data preprocessing, ML model training
+Gunjan → Streamlit UI and visualization
+Om → EDA, evaluation, reporting
 
-```text
-venv/
-__pycache__/
-*.pyc
-data/*.csv
-model/*.pkl
+---
+
+## 🚀 Future Scope
+
+* Integration of satellite data (NDVI)
+* Advanced ML / Deep Learning models
+* Mobile-friendly interface
+* More city coverage
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how machine learning combined with real-time environmental data can help monitor Urban Heat Islands and support sustainable urban planning.
+
+---
+
+<p align="center">
+<b>Built with ❤️ by Team Tech Titans</b>
+</p>
