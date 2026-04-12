@@ -61,22 +61,23 @@ Note: High accuracy (~100%) is expected because labels are generated using deter
 
 ## 📂 Project Structure
 
+```text
 uhi-predictor/
 ├── config.py
 ├── pipeline.py
 ├── app.py
 │
 ├── data/
-│ ├── preprocess.py
-│ └── training_ready.csv
+│   ├── preprocess.py
+│   └── training_ready.csv
 │
 ├── model/
-│ ├── train_model.py
-│ └── uhi_model.pkl
+│   ├── train_model.py
+│   └── uhi_model.pkl
 │
 ├── notebooks/
 └── docs/
-
+```
 ---
 
 ## 🚀 Getting Started
