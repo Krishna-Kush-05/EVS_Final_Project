@@ -84,6 +84,9 @@ with tab1:
     if st.session_state.map_data:
         df = pd.DataFrame(st.session_state.map_data)
         
+        # Ensure uhi_intensity is positive for Plotly marker sizing
+        df["marker_size"] = df["uhi_intensity"].abs() + 5
+        
         # Plotly map
         fig = px.scatter_geo(
             df,
@@ -98,7 +101,7 @@ with tab1:
                 "uhi_intensity": True,
                 "severity": True
             },
-            size="uhi_intensity",
+            size="marker_size",
             color="uhi_intensity",
             color_continuous_scale=["cyan", "green", "orange", "red", "darkred"],
             range_color=[0, 6],
