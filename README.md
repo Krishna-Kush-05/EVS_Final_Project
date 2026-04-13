@@ -141,6 +141,26 @@ Om → EDA, evaluation, reporting
 
 ---
 
+## 🖌️ What Gunjan Needs to Do Next (Streamlit Frontend)
+
+Gunjan, your main task is to improve and expand the dashboard UI in `app.py`. The backend logic and ML model are completed and integrated. Please focus on:
+
+### 1. Enhance Visual Aesthetics
+* Improve the custom CSS to create a more premium dashboard look.
+* Ensure color codes for `Severity` labels strictly match `SEVERITY_COLORS` in `config.py`.
+
+### 2. Interactive Components
+* Upgrade the Plotly India Live Map to include better hover animations and potentially a satellite basemap.
+* Add supplementary charts (e.g., bar charts comparing urban vs. rural temperature for all cities).
+
+### 3. User Experience (UX)
+* Optimize the layout for both wide screens and smaller display windows.
+* Expand the **Health Advisory** alerts to include specific actionable items for the user!
+
+*(Note: Please do not change the ML feature order in `config.py` or `pipeline.py`! The pipeline integration is finalized.)*
+
+---
+
 ## 🚀 Future Scope
 
 * Integration of satellite data (NDVI)
