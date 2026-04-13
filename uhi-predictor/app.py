@@ -9,7 +9,17 @@ import os
 
 # Set page config
 st.set_page_config(page_title="UHI Predictor", layout="wide")
-
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0E1117;
+    color: white;
+}
+h1, h2, h3 {
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 # CSS for severity badge
 st.markdown("""
 <style>
@@ -27,8 +37,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Top Bar
-st.title("🏙️ Urban Heat Island (UHI) Predictor")
-
+st.title("🌆 Urban Heat Island (UHI) Predictor")
+st.caption("Real-time AI-powered environmental heat analysis across Indian cities")
+st.divider()
 # Model Status Banner
 if os.path.exists(MODEL_PATH):
     st.success("🤖 ML Model active — XGBoost classifier loaded", icon="✅")
@@ -93,6 +104,7 @@ with tab1:
             range_color=[0, 6],
             text="city"
         )
+        fig.update_traces(marker=dict(line=dict(width=1, color='white')))
         fig.update_geos(
             scope="asia",
             center=dict(lat=22, lon=80),
@@ -134,7 +146,14 @@ with tab2:
                 
                 # Severity Badge
                 st.markdown(f'<div class="severity-badge" style="background-color: {res["color"]};">Severity: {res["severity"]}</div>', unsafe_allow_html=True)
-                
+                if res["severity"] == "Severe":
+                    st.error("🔥 Extreme Urban Heat — Stay Indoors")
+                elif res["severity"] == "Moderate":
+                    st.warning("⚠ Moderate Heat Island Effect")
+                elif res["severity"] == "Mild":
+                    st.info("🌤 Mild Heat Conditions")
+                else:
+                    st.success("✅ Safe Temperature Conditions")
                 # Health Advisory
                 if res["severity"] == "Severe":
                     st.error("Health Advisory: Extreme heat conditions. Vulnerable populations should stay indoors. High risk of heatstroke.")
