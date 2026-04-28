@@ -18,6 +18,15 @@ This project presents a **real-time UHI prediction system** that integrates:
 
 ---
 
+## 🌍 Live Dashboard
+
+**Access the interactive UHI Predictor dashboard here:**
+
+🔗 **[https://uhi-predictor-evs-project.streamlit.app/]**
+
+
+---
+
 ## ⚙️ System Workflow
 
 User selects city
@@ -62,10 +71,9 @@ Note: High accuracy (~100%) is expected because labels are generated using deter
 ## 📂 Project Structure
 
 ```text
-uhi-predictor/
-├── config.py
-├── pipeline.py
-├── app.py
+EVS_Final_Project/
+├── README.md
+├── requirements.txt
 │
 ├── data/
 │   ├── preprocess.py
@@ -75,61 +83,18 @@ uhi-predictor/
 │   ├── train_model.py
 │   └── uhi_model.pkl
 │
+├── uhi-predictor/
+│   ├── config.py
+│   ├── pipeline.py
+│   ├── app.py
+│   ├── requirements.txt
+│   └── README.md
+│
 ├── notebooks/
+│   └── EDA & Analysis.ipynb
+│
 └── docs/
-```
----
-
-## 🚀 Getting Started
-
-### 1. Clone Repository
-
-git clone https://github.com/Krishna-Kush-05/EVS_Final_Project.git
-cd EVS_Final_Project/uhi-predictor
-
----
-
-### 2. Setup Virtual Environment
-
-python -m venv venv
-venv\Scripts\activate
-
----
-
-### 3. Install Dependencies
-
-pip install -r requirements.txt
-
----
-
-### 4. Run Application
-
-streamlit run app.py
-
----
-
-## 🔍 Example Output
-
-City: Mumbai
-UHI Intensity: +0.8°C
-Severity: None
-
----
-
-## 🧩 Key Features
-
-✔ Real-time prediction using live API data
-✔ Machine Learning-based classification
-✔ Modular and scalable architecture
-✔ Ready for visualization and deployment
-
----
-
-## 📊 Data Sources
-
-* Urban Heat Island Dataset (Kaggle)
-* Open-Meteo Weather API
-
+    └── Technical Documentation
 ---
 
 ## 👥 Team Contributions
